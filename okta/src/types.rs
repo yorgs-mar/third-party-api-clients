@@ -9754,6 +9754,179 @@ pub struct UserProfile {
         rename = "zipCode"
     )]
     pub zip_code: String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub buddy:String,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isExternal"
+    )]
+    pub is_external:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+    )]
+    pub country:String,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isAdmin"
+    )]
+    pub is_admin:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isServiceAccount"
+    )]
+    pub is_service_account:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isContractor"
+    )]
+    pub is_contractor:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "LastUpdate"
+    )]
+    pub last_update:String,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "testUser"
+    )]
+    pub test_user:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isActive"
+    )]
+    pub is_active:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub github:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "hubSpotRole"
+    )]
+    pub hub_spot_role:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "loomMemberRole"
+    )]
+    pub loom_member_role:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub seniority:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "contractType"
+    )]
+    pub contract_type:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "startDate"
+    )]
+    pub c_start_date:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "doB"
+    )]
+    pub date_of_birth:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "endDate"
+    )]
+    pub end_date:String,
+    #[serde(
+        default,
+        skip_serializing_if = "Option::is_none",
+        rename = "isManager"
+    )]
+    pub is_manager:Option<bool>,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub tribe:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub squad:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub team:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "financeRole"
+    )]
+    pub finance_role:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+    )]
+    pub n2:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "trialPeriodEnding"
+    )]
+    pub trial_period_ending:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "wfaCountry"
+    )]
+    pub wfa_country:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "employeeid"
+    )]
+    pub employee_id:String,
+    #[serde(
+        default,
+        skip_serializing_if = "String::is_empty",
+        deserialize_with = "crate::utils::deserialize_null_string::deserialize",
+        rename = "TresoritLoginKey"
+    )]
+    pub tresorit_login_key:String,
 }
 
 #[derive(Serialize, Deserialize, PartialEq, Debug, Clone, JsonSchema)]
